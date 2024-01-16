@@ -13,7 +13,6 @@ const likedCardsReducer = (state = [], action) => {
   }
 };
 
-
 const showLikedOnlyReducer = (state = false, action) => {
   switch (action.type) {
     case 'TOGGLE_FILTER':

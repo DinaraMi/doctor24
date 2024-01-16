@@ -1,12 +1,12 @@
 import './Card.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { likeCard, dislikeCard, deleteCard } from '../../utils/actions';
 import delite from '../../images/delite.png';
 import dislike from '../../images/dislike.png';
 import like from '../../images/like.png';
 
-function Card({ card }) {
+function Card({ card, onDelete }) {
   const dispatch = useDispatch();
   const likedCards = useSelector((state) => state.likedCards);
 
@@ -26,12 +26,12 @@ function Card({ card }) {
 
   const handleDelete = () => {
     dispatch(deleteCard(card.id));
+    onDelete(card.id);
   };
 
   return (
     <div className='cards'>
       <div className='card__container'>
-        <div className='card__element'>
           <img className='card__images' src={card.url} alt="карточка" />
           <button className='card__images-like' onClick={handleLike}>
             {isLiked ? <img src={like} alt='лайк' /> : <img src={dislike} alt='дизлайк' />}
@@ -39,7 +39,6 @@ function Card({ card }) {
           <button className='card__images-delite' onClick={handleDelete}>
             <img src={delite} alt='картинка удаления' />
           </button>
-        </div>
       </div>
     </div>
   );
