@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+Проект "Мир Котиков"
+Добро пожаловать в Мир Котиков - место, полное очаровательных котячих картинок! Этот проект представляет собой простое веб-приложение на React, которое позволяет пользователям просматривать и взаимодействовать с коллекцией котячих карточек. Пользователи могут ставить лайки или дизлайки картам, удалять их и даже фильтровать отображение, чтобы показать только понравившиеся карты.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Начало работы
+Клонировать репозиторий: git clone https://github.com/DinaraMi/doctor24.git
+Установить зависимости: npm install
+Запустить приложение: npm start
 
-## Available Scripts
+Открыть в браузере:
+Откройте браузер и перейдите по адресу http://localhost:3000, чтобы посмотреть Мир Котиков.
 
-In the project directory, you can run:
+Структура проекта
+src/components: Содержит компоненты React, такие как App, Card и Filter.
+src/images: Содержит изображения, используемые в проекте.
+src/utils: Включает в себя вспомогательные функции, действия и файл API.
+src/reducers: Содержит редукторы Redux для управления состоянием.
+public: Общедоступные ресурсы и HTML-файл.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Возможности
+Загрузка карточек:
+Карточки загружаются из внешнего API с использованием утилитарной функции fetchData.
+Поставить лайк или дизлайк карточке:
+Пользователи могут выражать свое предпочтение к котячим карточкам, ставя лайки или дизлайки.
+Лайкнутые карточки хранятся в состоянии Redux с использованием редуктора likedCardsReducer.
+Удаление карточки:
+Пользователи могут удалить котячую карточку из коллекции.
+Для обновления состояния диспетчеризуется действие deleteCard.
+Фильтрация лайкнутых карточек:
+Компонент Filter позволяет пользователям переключаться между отображением всех карточек и отображением только лайкнутых.
+Состояние управляется с использованием редуктора showLikedOnlyReducer.
